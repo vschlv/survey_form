@@ -9,41 +9,39 @@
 </head>
 
 <body>
-    <h1 id="title">freeCodeCamp Survey Form</h1>
-    <p id="description">
-        Thank you for taking the time to help us improve the platform
-    </p>
+    <header>
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">
+            Thank you for taking the time to help us improve the platform
+        </p>
+    </header>
 
     <form action="https://survey-form.freecodecamp.rocks/" id="survey-form">
         <fieldset>
-            <label for="name" id="name-label">
-                Name <input type="text" id="name" name="name" placeholder="Enter your name">
-            </label>
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <label for="email" id="email-label">
-                Email <input type="email" name="email" id="email" placeholder="Enter your Email" required>
-            </label>
+            <label for="email" id="email-label">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your Email" required>
 
-            <label for="number" id="number-label">
-                Age (optional) <input type="number" name="number" id="number" placeholder="Age" min="1" max="120">
-            </label>
+
+            <label for="number" id="number-label">Age (optional)</label>
+            <input type="number" name="number" id="number" placeholder="Age" min="1" max="120">
         </fieldset>
 
         <fieldset>
-            <label for="role">
-                Which option best describes your current role?
-                <select name="role" id="dropdown">
-                    <option value="">Select current role</option>
-                    <option value="1">Student</option>
-                    <option value="2">Full Time Job</option>
-                    <option value="3">Full Time Learner</option>
-                    <option value="4">Prefer not to say</option>
-                    <option value="5">Other</option>
-                </select>
-            </label>
+            <label for="role">Which option best describes your current role?</label>
+            <select name="role" id="dropdown">
+                <option value="">Select current role</option>
+                <option value="1">Student</option>
+                <option value="2">Full Time Job</option>
+                <option value="3">Full Time Learner</option>
+                <option value="4">Prefer not to say</option>
+                <option value="5">Other</option>
+            </select>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="radio-buttons">
             <legend>Would you recommend freeCodeCamp to a friend?</legend>
             <label for="definitely">
                 <input type="radio" name="recommendation" value="definitely" id="definitely" checked> Definitely
@@ -59,16 +57,14 @@
         </fieldset>
 
         <fieldset>
-            <label for="feature">
-                What is your favorite feature of freeCodeCamp?
-                <select name="feature" id="feature-dropdown">
-                    <option value="">Select an option</option>
-                    <option value="1">Challenges</option>
-                    <option value="2">Projects</option>
-                    <option value="3">Community</option>
-                    <option value="4">Open Source</option>
-                </select>
-            </label>
+            <label for="feature">What is your favorite feature of freeCodeCamp?</label>
+            <select name="feature" id="feature-dropdown">
+                <option value="">Select an option</option>
+                <option value="1">Challenges</option>
+                <option value="2">Projects</option>
+                <option value="3">Community</option>
+                <option value="4">Open Source</option>
+            </select>
         </fieldset>
 
         <fieldset>
@@ -86,12 +82,12 @@
             <label for="forum"><input type="checkbox" name="forum" id="forum"> Forum</label>
             <label for="add-courses"><input type="checkbox" name="add-courses" id="add-courses"> Additional
                 Courses</label>
+        </fieldset>
 
-            <label for="comment">
-                Any comments or suggestions?
-                <textarea name="comment" id="comment" cols="30" rows="10"
-                    placeholder="Enter your comment here..."></textarea>
-            </label>
+        <fieldset>
+            <label for="comment">Any comments or suggestions?</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"
+                placeholder="Enter your comment here..."></textarea>
         </fieldset>
 
         <input type="submit" id="submit" value="Submit">
